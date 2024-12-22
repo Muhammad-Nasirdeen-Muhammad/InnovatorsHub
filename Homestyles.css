@@ -1,0 +1,287 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: segoe ui symbol;
+}
+:root{
+	--light-mode: rgb(242, 242, 242);
+	--light-hover: rgba(0, 0, 0, .1);
+	--text-color: #707070;
+	--icon-light: #000;
+	--nav-light: #fff;
+	--text-colorL: #000;
+	--text-colorD: #303030;
+	--color-fill1: rgb(190, 216, 243);
+	--color-fill2: rgb(254, 253, 231);
+	--color-fill3: rgb(230, 200, 201);
+	--box-shadows: rgba(0, 0, 0, .5);
+	--text-shadow: rgba(0, 0, 0, .6);
+	--searchbox-border: #ddd;
+	--button-hover: rgb(192, 192, 192);
+}
+body{
+	background-color: var(--light-mode);
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 16px;
+	background-color: white	
+}
+.header .IH-T{
+	display: flex;
+}
+.header .IH-T svg{
+	margin-top: 6px;
+	cursor: pointer;
+}
+.header .IH-T .nav-opener{
+	border-radius: 100%;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	display: none;
+}
+.header .IH-T .nav-opener:hover{
+	background-color: rgba(0, 0, 0, .1)
+}
+.scrolled{
+	box-shadow: 2px 1px  var(--box-shadows);
+}
+.header .logo-name{
+	font-size: 20px;
+	font-weight: bold;
+	color: cyan;
+	text-shadow: 2px 1px  var(--text-shadow);
+}
+
+.header .user{
+	width: 25px;
+	height: 25px;
+	border: 1px solid black;
+	border-radius: 100%;
+}
+.header .search-box input{
+	width: 300px;
+	height: 25px;
+	padding-left: 25px;
+	font-size: 017px;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	/*font-weight: bold;*/
+}
+.header .search-box{
+	border: 1px solid var(--searchbox-border);
+	font-size: 19px;
+	border-radius: 9px;
+	display: flex;
+}
+.header .search-box button{
+	outline: none;
+	border: none;
+	border-left: 1px solid var(--searchbox-border);
+	cursor: pointer;
+	padding: 2px;
+	font-weight: bold;
+	border-bottom-right-radius: 9px;
+	border-top-right-radius: 9px
+}
+
+.header .search-box button svg{
+	display: block;
+	width: 25px;
+	height: 23px;
+}
+.header .search-box button:hover{
+	background-color: var(--button-hover)
+}
+svg{
+	display: block;
+	width: 25px;
+	height:23px;
+	fill: var(--icon-light);
+}
+.nav-section{
+	position: fixed;
+	height: 100vh;
+	width: 210px;
+	padding: 10px 14px;
+	background-color: var(--nav-light);
+	transition: .5s ease;
+}
+.nav-section nav{
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 90px);
+	justify-content: space-between;
+	box-sizing: border-box;
+
+}
+.nav-section nav li{	
+	list-style-type: none;
+	list-style: none;
+	margin-bottom: 8px;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	color: var(--text-color);	
+	border-radius: 5px;
+	padding: 5px 3px;
+}
+.nav-section nav li:hover{
+	background-color: var(--light-hover);
+}
+.nav-section nav li svg{
+
+}
+.nav-section nav .nav-link li{
+	display: flex;
+	letter-spacing: 2px;
+	list-style-type: none;
+	list-style: none;
+	text-decoration: none;
+}
+.nav-section nav li svg{
+	fill: var(--text-color);
+	min-width: 40px;
+}
+/*.nav-section nav .nav-link .Forums svg{
+	margin-top: 3px;
+	margin-left: 4px;
+	min-width: 37px
+}*/
+.nav-section nav .s-a .SA-links li {
+	display: flex;
+}
+.nav-section nav .s-a .SA-links .Logout{
+	color: red;
+}
+.nav-section nav .s-a .SA-links .setting .name .chevron{
+	position: fixed;
+	left: 200px;
+	min-width: 15px;
+	border-radius: 100%;
+}
+.nav-section nav .s-a .SA-links .setting .darkmode ul li div{
+	display: flex;
+}
+.nav-section nav .s-a .SA-links .setting .darkmode ul li{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.contents{
+	position: fixed;
+	display: block;
+	left: 30%;	
+	overflow: scroll;
+	max-height: calc(100% - 90px);
+	min-width: 50%;
+	transition: .6s ease;
+}
+::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+}
+::-webkit-scrollbar-thumb{
+	height: 0;
+	width: 0;
+}
+.feed .data{
+	border: 1px solid var(--nav-light);
+	width: 90%;
+	margin-bottom: 20px;
+	border-top-left-radius: 16px;	
+	border-top-right-radius: 16px;
+}
+.feed .data .Dheader{
+	height: 40px;
+	background-color: var(--nav-light);
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+.feed .data .Dheader .user-details{
+	margin-left: 11px;
+}
+.feed .data .Dheader .user-details .username{
+	font-weight: bold
+}
+.feed .data .Dheader .profileLink{
+	font-size: 12px;
+	color: var(--text-color);
+}
+.feed .data .content .description a{
+	text-decoration: none;
+	color: green;
+}
+.feed .data .content{
+	margin: 15px
+}
+.feed .data .content .post{
+	text-align: center;
+	margin-top: 19px;
+}
+.feed .data .content .post img{
+	width: 100%;
+	border-radius: 25px;
+	border-top-left-radius: 0;
+	cursor: pointer;
+}
+.feed .data .contentRev{
+	background-color: var(--nav-light);
+}
+.feed .data .contentRev .Satisfactory{
+	display: flex;
+}
+.feed .data .contentRev .Satisfactory div{
+	margin: 15px;
+	cursor: pointer;
+}
+footer{
+	display: grid;
+	padding: 5px;
+	color: var(--text-color)
+}
+.settings{
+	display: none;
+}
+
+@media (max-width: 820px){
+	.header .IH-T .nav-opener{
+		display: initial;
+	}
+	.nav-section{
+		width: 25px;		
+		transition: .5s ease
+	}
+	.contents{
+		left: 15%;
+		transition: 1s ease;
+	}
+	.nav-section p,
+	.nav-section nav li .chevron{
+		display: none;
+	}
+	.nav-section nav li:hover{
+		min-width: 26px;
+	}
+	.nav-section nav .s-a .SA-links .setting .darkmode ul input{
+		display: none;
+	}
+	.header .IH-T .logo-name{
+		display: none;
+		transition: 2s ease
+	}
+	.feed .data .content .post img{
+		/*width: 100%;*/
+	}
+	.header .search-box{
+		width: 250px;
+	}
+	.header .search-box input{
+		width: 200px;
+	}
+}
